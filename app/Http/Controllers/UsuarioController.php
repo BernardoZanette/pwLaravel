@@ -33,7 +33,7 @@ class UsuarioController extends Controller
         $dados['senha'] = Hash::make($dados['senha']);
         Usuario::create($dados);
         
-        return redirect()->route('usuario');
+        return redirect()->route('usuario'); 
     }
 
     public function editarView(Usuario $usuario) {
@@ -70,7 +70,7 @@ class UsuarioController extends Controller
 
     public function login(Request $form) {
         if ($form->isMethod('POST')) {
-            
+            dd($form);
         }
 
         return view('usuario.login');

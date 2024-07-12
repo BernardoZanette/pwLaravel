@@ -5,6 +5,7 @@
 @section('conteudo')
 
 <form method="post" action="">
+    @csrf
     <input type="text" name="username" placeholder="Usuário">
     <br>
     <input type="password" name="password" placeholder="Senha">
