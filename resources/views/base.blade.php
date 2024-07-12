@@ -14,8 +14,16 @@
         |
         <a href="{{route('usuario.cadastrar')}}">Registrar Usuário</a>
         |
+        @if(Auth::user())
+        <a href="{{route('logout')}}">Logout</a>
+        @else
         <a href="{{route('login')}}">Login</a>
+        @endif
         <hr>
+            @if(Auth::user())
+        Olá, {{Auth::user()['nome']}}
+        @endif
         @yield('conteudo')
+   
     </body>
 </html>

@@ -18,9 +18,15 @@ class Usuario extends Model implements Authenticatable
         'admin'
     ];
 
-    function getAuthIdentifierName() {}
-    function getAuthIdentifier() {}
-    function getAuthPassword() {}
+    function getAuthIdentifierName() {
+        return 'id';
+    }
+    function getAuthIdentifier() {
+        return $this->id;
+    }
+    function getAuthPassword() {
+        return $this->senha;
+    }
     function getRememberToken() {}
     function setRememberToken($value) {}
     function getRememberTokenName() {}

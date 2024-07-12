@@ -40,6 +40,6 @@ Route::get('/usuario/login', [UsuarioController::class, 'login'])->name('login')
 
 Route::post('/usuario/login', [UsuarioController::class, 'login']);
 
-Route::get('/usuario/logou', [UsuarioController::class, 'logou'])->name('logou');
+Route::get('/usuario/logout', [UsuarioController::class, 'logout'])->name('logout');
 
-Route::post('/usuario/logou', [UsuarioController::class, 'logou']);
+Route::post('/usuario/logout', [UsuarioController::class, 'logout'])->name('logout');
