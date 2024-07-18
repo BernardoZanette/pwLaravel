@@ -33,7 +33,6 @@ class UsuarioController extends Controller
 
         $dados['senha'] = Hash::make($dados['senha']);
         Usuario::create($dados);
-        
         return redirect()->route('usuario'); 
     }
 
@@ -76,7 +75,7 @@ class UsuarioController extends Controller
                 "senha" => "required"
             ]);
             if (Auth::attempt(['login' => $credenciais['login'], 'password' => $credenciais['senha']])) {
-                return redirect()->route('index');
+                return redirect()->intended(route('index'));
             } else {
                 return redirect()->route('login')
                     ->with('erro', 'Usuário ou senha inválidos.');
@@ -85,7 +84,7 @@ class UsuarioController extends Controller
 
         return view('usuario.login');
     }
-    
+
     public function logout(Request $form) {
         Auth::logout();
         return redirect()->route('index');

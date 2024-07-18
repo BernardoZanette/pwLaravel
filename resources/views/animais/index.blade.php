@@ -14,6 +14,7 @@
     <tr>
         <th>Nome</th>
         <th>Idade</th>
+        <th>Função</th>
     </tr>
 
     @foreach ($animais as $animal)
