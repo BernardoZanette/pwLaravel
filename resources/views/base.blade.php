@@ -20,7 +20,7 @@
         <a href="{{route('login')}}">Login</a>
         @endif
         <hr>
-            @if(Auth::user())
+        @if(Auth::user())
         Olá, {{Auth::user()['nome']}}
         @endif
         @yield('conteudo')
