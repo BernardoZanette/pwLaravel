@@ -43,8 +43,8 @@ class UsuariosController extends Controller
 
             // Pega os dados do formulário
             $credenciais = $form->validate([
-                'username' => 'required',
-                'password' => 'required',
+                'login' => 'required',
+                'senha' => 'required',
             ]);
 
             // Tenta fazer o login

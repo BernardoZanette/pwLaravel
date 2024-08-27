@@ -131,9 +131,15 @@
                 <h1 class="text-3xl text-black pb-6">@yield('titulo')</h1>
 
                 <div class="flex flex-wrap">
-                <div class="leading-loose">
-                @yield('conteudo')
+                <div class="leading-loose min-w-full mb-2">
+                    @if(session('erro'))
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative">
+                            <div class="fas fa-exclamation-triangle mr-3"></div>
+                            {{ session('erro') }}
+                        </div>
+                    @endif
                 </div>
+                <div class="leading-loose">@yield('conteudo')</div>
                 </div>
             </main>
     
