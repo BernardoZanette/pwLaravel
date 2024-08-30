@@ -15,7 +15,7 @@
 </div>  
 @endif
 
-<form class="p-10 bg-white rounded shadow-xl" method="post" action="{{route('login')}}">
+<form class="p-10 bg-white rounded shadow-xl w-1/3" method="post" action="{{route('login')}}">
     @csrf
     <div class="">
         <label class="block text-sm text-gray-600" for="login">Usuário</label>

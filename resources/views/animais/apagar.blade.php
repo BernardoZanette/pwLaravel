@@ -11,9 +11,9 @@
 @method('delete')
 @csrf
 
-<input type="submit" value="Pode apagar sem medo" style="background-color:red;color:white;">
+<input type="submit" value="Pode apagar sem medo" class="mb-4 bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">
 
 </form>
 
-<a href="{{ route('animais') }}">Cancelar</a>
+<a class="bg-white hover:bg-green-500 hover:text-white text-green-800 font-semibold py-2 px-4 border border-green-400 rounded shadow" href="{{ route('animais') }}">Cancelar</a>
 @endsection
