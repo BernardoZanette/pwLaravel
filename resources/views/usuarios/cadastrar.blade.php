@@ -24,7 +24,7 @@
     <br>
     <input type="text" name="username" placeholder="Username" value="{{ old('username') }}">
     <br>
-    <input type="password" name="password" placeholder="Senha" value="{{ old('password') }}">
+    <input type="password" name="password" placeholder="Password" value="{{ old('password') }}">
     <br>
     Admin
     <select name="admin">

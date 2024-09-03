@@ -18,12 +18,12 @@
 <form class="p-10 bg-white rounded shadow-xl w-1/3" method="post" action="{{route('login')}}">
     @csrf
     <div class="">
-        <label class="block text-sm text-gray-600" for="login">Usuário</label>
-        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="login" name="login" type="text" placeholder="usuario5678" aria-label="login">
+        <label class="block text-sm text-gray-600" for="username">Usuário</label>
+        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="username" name="username" type="text" placeholder="usuario5678" aria-label="username">
     </div>
     <div class="mt-2">
-        <label class="block text-sm text-gray-600" for="senha">Senha</label>
-        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="senha" name="senha" type="password" placeholder="1234" aria-label="senha">
+        <label class="block text-sm text-gray-600" for="password">Senha</label>
+        <input class="w-full px-5 py-1 text-gray-700 bg-gray-200 rounded" id="password" name="password" type="password" placeholder="1234" aria-label="password">
     </div>
     <div class="mt-6">
         <button class="px-4 py-1 text-white font-light tracking-wider bg-blue-700 rounded" type="submit">Entrar</button>
