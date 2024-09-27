@@ -23,16 +23,25 @@ class AnimaisController extends Controller
 
     public function gravar(Request $form) {
 
+        $img = $form->file('imagem')->store('animais', 'imagens');
+        
         $dados = $form->validate([
             'nome' => 'required|min:3',
-            'idade' => 'required|integer'
+            'idade' => 'required|integer',
         ]);
 
-        // Animal::create($dados);
+        $dados['imagem'] = $img;
 
-        Mail::to('bernardo7206@gmail.com')->send(new AnimalCadastrado);
-        return; 
-        // return redirect()->route('animais');
+        $animal = Animal::create($dados);
+        Mail::to('alguem@batata.com')->send(new AnimalCadastrado($animal));
+
+        return redirect()->route('animais');
+    }
+
+    public function ver(Animal $animal) {
+        return view('animais.ver', [
+            'animal' => $animal
+        ]);
     }
 
     public function apagar(Animal $animal) {

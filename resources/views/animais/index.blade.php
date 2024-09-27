@@ -27,7 +27,7 @@
             @else 
                 <tr class="hover:bg-grey-lighter">
             @endif
-                <td class="text-center w-1/3 py-3 px-4">{{ $animal['nome'] }}</td>
+                <td class="text-center w-1/3 py-3 px-4"><a href="{{route('animais.ver', $animal['id'])}}">{{ $animal['nome'] }}</a></td>
                 <td class="text-center py-3 px-4">{{ $animal['idade'] }}</td>
                 <td class="text-center py-3 px-4"><a class="bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded" href="{{ route('animais.apagar', $animal['id']) }}">Apagar</a></td>
             </tr>
